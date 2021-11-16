@@ -1,18 +1,5 @@
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
 <nav>
-  <p-tabView>
-    <p-tabPanel header="Header 1">
-      <a routerLink="/crew">Crew</a>
-    </p-tabPanel>
-    <p-tabPanel header="Header 2">
-      <a routerLink="/rockets">Rockets</a>
-    </p-tabPanel>
-    <p-tabPanel header="Header 3">
-      <a routerLink="/land-pads">Land pads</a>
-    </p-tabPanel>
-    <p-tabPanel header="Header 4">
-      <a routerLink="/launches">Launches</a>
-    </p-tabPanel>
-  </p-tabView>
+  <p-tabMenu [model]="items"></p-tabMenu>
 </nav>
 <router-outlet></router-outlet>

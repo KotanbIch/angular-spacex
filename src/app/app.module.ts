@@ -1,22 +1,23 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {HeroesComponent} from './heroes/heroes.component';
-import {FormsModule} from "@angular/forms";
-import {HeroDetailComponent} from './hero-detail/hero-detail.component';
-import {MessagesComponent} from './messages/messages.component';
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {HttpClientModule} from "@angular/common/http";
-import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
-import {InMemoryDataService} from './in-memory-data.service';
-import {HeroSearchComponent} from './hero-search/hero-search.component';
-import {TabViewModule} from 'primeng/tabview';
-import {RocketsComponent} from './rockets/rockets.component';
-import {CrewComponent} from './crew/crew.component';
-import {LandPadsComponent} from './land-pads/land-pads.component';
-import {LaunchesComponent} from './launches/launches.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { RocketsComponent } from './rockets/rockets.component';
+import { CrewComponent } from './crew/crew.component';
+import { LandPadsComponent } from './land-pads/land-pads.component';
+import { LaunchesComponent } from './launches/launches.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 @NgModule({
   declarations: [
@@ -29,20 +30,20 @@ import {LaunchesComponent} from './launches/launches.component';
     RocketsComponent,
     CrewComponent,
     LandPadsComponent,
-    LaunchesComponent
+    LaunchesComponent,
+    FavouritesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false}
-    ),
-    TabViewModule
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
+    TabMenuModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}
