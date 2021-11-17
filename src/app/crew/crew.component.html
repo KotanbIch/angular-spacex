@@ -1,21 +1,28 @@
-<ul>
-  <li *ngFor="let crewMember of crewMembers$ | async">
-    <p-card
-      [header]="crewMember.name"
-      [subheader]="crewMember.agency"
-      [style]="{ width: '360px', margin: '10px', 'border-radius': '10px' }"
-      styleClass="p-card-shadow crew-member"
-    >
-      <ng-template pTemplate="header">
-        <img [src]="crewMember.image" class="crew-member-image"/>
-      </ng-template>
-      <p>{{ crewMember.status }}</p>
-      <ng-template pTemplate="footer"> </ng-template>
-    </p-card>
-    <!--    <a routerLink="/detail/{{hero.id}}">-->
-    <!--      <span class="badge">{{hero.id}}</span> {{hero.name}}-->
-    <!--    </a>-->
-    <!--    <button class="delete" title="delete hero"-->
-    <!--            (click)="delete(hero)">x</button>-->
-  </li>
-</ul>
+<div
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()"
+>
+  <ul class="crew-members-list">
+    <li *ngFor="let crewMember of crewMembers" class="crew-member">
+      <p-card
+        [header]="crewMember.name"
+        [subheader]="crewMember.agency"
+        [style]="{ width: '500px', margin: '10px', 'border-radius': '20px' }"
+        styleClass="p-card-shadow"
+      >
+        <ng-template pTemplate="header">
+          <img [src]="crewMember.image" class="crew-member-image" />
+        </ng-template>
+        <p>{{ crewMember.status }}</p>
+        <ng-template pTemplate="footer"> </ng-template>
+      </p-card>
+      <!--    <a routerLink="/detail/{{hero.id}}">-->
+      <!--      <span class="badge">{{hero.id}}</span> {{hero.name}}-->
+      <!--    </a>-->
+      <!--    <button class="delete" title="delete hero"-->
+      <!--            (click)="delete(hero)">x</button>-->
+    </li>
+  </ul>
+</div>

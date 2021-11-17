@@ -4,7 +4,10 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: [
+    './app.component.css',
+    '../../node_modules/primeflex/primeflex.css',
+  ],
 })
 export class AppComponent {
   public title = 'SpaceX';

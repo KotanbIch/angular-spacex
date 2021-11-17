@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { CardModule } from 'primeng/card';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -39,6 +40,7 @@ import { FavouritesComponent } from './favourites/favourites.component';
     HttpClientModule,
     TabMenuModule,
     CardModule,
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
