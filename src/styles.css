@@ -10,6 +10,7 @@ h2, h3 {
 }
 body {
   margin: 2em;
+  background-color: #181a1b;
 }
 body, input[type="text"], button {
   color: #333;

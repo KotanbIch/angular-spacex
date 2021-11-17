@@ -3,11 +3,11 @@
     <p-card
       [header]="crewMember.name"
       [subheader]="crewMember.agency"
-      [style]="{ width: '360px', margin: '10px' }"
+      [style]="{ width: '360px', margin: '10px', 'border-radius': '10px' }"
       styleClass="p-card-shadow crew-member"
     >
       <ng-template pTemplate="header">
-        <img [src]="crewMember.image" />
+        <img [src]="crewMember.image" class="crew-member-image"/>
       </ng-template>
       <p>{{ crewMember.status }}</p>
       <ng-template pTemplate="footer"> </ng-template>

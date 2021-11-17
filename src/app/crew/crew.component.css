@@ -1,4 +1,7 @@
-.crew-member {
-  border-radius: 5px;
-  margin: 5px;
+.p-card {
+  /*border-radius: 5px;*/
+}
+
+.crew-member-image {
+  border-radius: 5px 5px 0 0;
 }

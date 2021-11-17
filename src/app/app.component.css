@@ -19,7 +19,3 @@ nav a:hover {
 nav a.active {
   background-color: black;
 }
-
-body {
-  background-color: #181a1b;
-}
